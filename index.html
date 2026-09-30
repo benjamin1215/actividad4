@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Coloca el PX de tu pantalla.">
+    <button onclick="testear()">Testear</button>
+    <p id="Salida"></p>
+
+    <script>
+        function testear() {
+            let a = Number(document.getElementById('numero').value);
+
+            if (a < 576) {
+                document.getElementById('Salida').innerHTML = 'El tamaño es XS';
+            } else if (a < 768) {
+                document.getElementById('Salida').innerHTML = 'El tamaño es SM';
+            } else if (a < 962) {
+                document.getElementById('Salida').innerHTML = 'El tamaño es MD';
+            } else if (a < 1200) {
+                document.getElementById('Salida').innerHTML = 'El tamaño es XL';
+            } else {
+                document.getElementById('Salida').innerHTML = 'El tamaño es XXL';
+            }
+        }
+    </script>
+</body>
+</html>
